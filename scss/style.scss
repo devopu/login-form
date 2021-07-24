@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+$primary-color: #ee5522;
+$text-color: #595959;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-color;
+}
+
+.container {
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    box-shadow: 0 0 25px lightgray;
+
+    @media screen and (max-width: 450px) {
+        margin: 0 10px;
+    }
+
+    .login__form {
+        text-align: center;
+        padding: 30px;
+
+        h2 {
+            font-size: 2rem;
+            color: #3a3a3a;
+
+            @media screen and (max-width: 450px) {
+                font-size: 1.5rem;
+            }
+        }
+
+        .social__icons {
+            margin: 20px 0;
+
+            i {
+                font-size: 1.4rem;
+                margin: 0 5px;
+                cursor: pointer;
+            }
+
+            i:first-child:hover {
+                color: #3b5998;
+            }
+
+            i:last-child:hover {
+                color: #0072b1;
+            }
+        }
+
+
+        form {
+            width: 300px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+
+            @media screen and (max-width: 450px) {
+                width: 100%;
+            }
+
+            .input__section {
+                position: relative;
+
+                label {
+                    position: absolute;
+                    top: 10px;
+                    left: 15px;
+                    font-size: .9rem;
+                    color: lighten($text-color, 30);
+                    transition: top .3s;
+                    z-index: -1;
+                }
+
+                label.focus {
+                    top: -10px;
+                    font-size: .7rem;
+                    color: $primary-color;
+                    font-weight: bold;
+                }
+
+                input {
+                    width: 100%;
+                    padding: 10px 15px;
+                    margin-bottom: 20px;
+                    border: none;
+                    border-bottom: 2px solid lighten($text-color, 50);
+                    outline: none;
+                    background: transparent;
+    
+                    &:focus {
+                        border-bottom: 2px solid $primary-color;
+                    }       
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            button {
+                align-self: center;
+                background: $primary-color;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 50px;
+                outline: none;
+                cursor: pointer;
+                margin-top: 15px;
+                transition: background .2s;
+
+                &:hover {
+                    background: #d84d1f;
+                }
+            }
+
+        }
+    }
+}

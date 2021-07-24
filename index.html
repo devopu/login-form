@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <section class="container">
+        <div class="login__form">
+            <h2>Login</h2>
+            <div class="social__icons">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-linkedin"></i>            
+            </div>
+            <p>or use your account</p>
+
+            <form>
+                <div class="input__section">
+                    <label>Email</label>
+                    <input type="email" placeholder="">
+                </div>
+                <div class="input__section">
+                    <label>Password</label>
+                    <input type="password" placeholder="">
+                </div>  
+                <a href="#">Forgot your password?</a>
+                <button>Log In</button>
+            </form>
+        </div>
+    </section>
+
+
+    <script>
+
+        let inputs = document.querySelectorAll("input");
+
+        inputs.forEach(input => {
+            let label = input.parentNode.children[0];
+
+            input.addEventListener("focus", () => {
+                label.classList.add("focus");
+            })
+
+            input.addEventListener("focusout", () => {
+                if(input.value.trim() == "") {
+                    label.classList.remove("focus");
+                }
+            })
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #595959;
+}
+
+.container {
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  box-shadow: 0 0 25px lightgray;
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    margin: 0 10px;
+  }
+}
+
+.container .login__form {
+  text-align: center;
+  padding: 30px;
+}
+
+.container .login__form h2 {
+  font-size: 2rem;
+  color: #3a3a3a;
+}
+
+@media screen and (max-width: 450px) {
+  .container .login__form h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.container .login__form .social__icons {
+  margin: 20px 0;
+}
+
+.container .login__form .social__icons i {
+  font-size: 1.4rem;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.container .login__form .social__icons i:first-child:hover {
+  color: #3b5998;
+}
+
+.container .login__form .social__icons i:last-child:hover {
+  color: #0072b1;
+}
+
+.container .login__form form {
+  width: 300px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 450px) {
+  .container .login__form form {
+    width: 100%;
+  }
+}
+
+.container .login__form form .input__section {
+  position: relative;
+}
+
+.container .login__form form .input__section label {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: .9rem;
+  color: #a6a6a6;
+  transition: top .3s;
+  z-index: -1;
+}
+
+.container .login__form form .input__section label.focus {
+  top: -10px;
+  font-size: .7rem;
+  color: #ee5522;
+  font-weight: bold;
+}
+
+.container .login__form form .input__section input {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 2px solid #d9d9d9;
+  outline: none;
+  background: transparent;
+}
+
+.container .login__form form .input__section input:focus {
+  border-bottom: 2px solid #ee5522;
+}
+
+.container .login__form form a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container .login__form form button {
+  align-self: center;
+  background: #ee5522;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background .2s;
+}
+
+.container .login__form form button:hover {
+  background: #d84d1f;
+}
